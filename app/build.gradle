@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
+    id 'com.apollographql.apollo'
 }
 
 android {
@@ -81,6 +82,15 @@ dependencies {
     //Moshi
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
 
+    //Apollo
+    implementation "com.apollographql.apollo:apollo-runtime:2.5.8"
+    implementation "com.apollographql.apollo:apollo-coroutines-support:2.5.8"
+    implementation "com.apollographql.apollo:apollo-android-support:2.5.8"
+
     //Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+}
+
+apollo {
+    generateKotlinModels.set(true)
 }
