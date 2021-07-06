@@ -2,19 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/start_fragment">
+    app:startDestination="@id/start_activity">
 
 
-    <fragment
-        android:id="@+id/start_fragment"
+    <activity
+        android:id="@+id/start_activity"
+        tools:layout="@layout/activity_start"
         android:label="GraphQl">
-        <action
-            android:id="@+id/action_start_fragment_to_main_fragment"
-            app:destination="@id/auth_fragment" />
-    </fragment>
+    </activity>
 
     <fragment
         android:id="@+id/auth_fragment"
+        android:name="com.example.graphql.feature.AuthFragment"
+        tools:layout="@layout/auth_fragment"
         android:label="GraphQl">
         <action
             android:id="@+id/action_auth_fragment_to_placeholder3"

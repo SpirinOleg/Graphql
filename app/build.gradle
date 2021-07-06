@@ -24,6 +24,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("Integer", "VERSION_CODE", "${defaultConfig.versionCode}")
+            buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
         }
     }
     compileOptions {
@@ -81,6 +83,9 @@ dependencies {
 
     //Moshi
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+
+    //crypto
+    implementation("androidx.security:security-crypto:$crypto")
 
     //Apollo
     implementation "com.apollographql.apollo:apollo-runtime:2.5.8"
