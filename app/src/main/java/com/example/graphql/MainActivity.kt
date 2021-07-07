@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment)
         appBarConfiguration = AppBarConfiguration(navController.graph)
 
-        setSupportActionBar(toolbar)
         setupActionBar(navController, appBarConfiguration)
     }
 

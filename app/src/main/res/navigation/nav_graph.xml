@@ -4,18 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/start_activity">
 
-
-    <activity
+    <fragment
         android:id="@+id/start_activity"
+        android:name="com.example.graphql.feature.SplashFragment"
         tools:layout="@layout/activity_start"
         android:label="GraphQl">
-    </activity>
+        <action
+            android:id="@+id/action_start_activity_to_auth_fragment"
+            app:destination="@id/auth_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/auth_fragment"
         android:name="com.example.graphql.feature.AuthFragment"
         tools:layout="@layout/auth_fragment"
-        android:label="GraphQl">
+        android:label="Авторизация">
         <action
             android:id="@+id/action_auth_fragment_to_placeholder3"
             app:destination="@id/main_gragment" />
