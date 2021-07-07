@@ -2,17 +2,17 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/start_activity">
+    app:startDestination="@id/auth_fragment">
 
-    <fragment
-        android:id="@+id/start_activity"
-        android:name="com.example.graphql.feature.SplashFragment"
-        tools:layout="@layout/activity_start"
-        android:label="GraphQl">
-        <action
-            android:id="@+id/action_start_activity_to_auth_fragment"
-            app:destination="@id/auth_fragment" />
-    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/start_activity"-->
+<!--        android:name="com.example.graphql.feature.SplashFragment"-->
+<!--        tools:layout="@layout/activity_start"-->
+<!--        android:label="GraphQl">-->
+<!--        <action-->
+<!--            android:id="@+id/action_start_activity_to_auth_fragment"-->
+<!--            app:destination="@id/auth_fragment" />-->
+<!--    </fragment>-->
 
     <fragment
         android:id="@+id/auth_fragment"
@@ -27,5 +27,6 @@
     <fragment
         android:id="@+id/main_gragment"
         android:label="GraphQl" />
+
 
 </navigation>
