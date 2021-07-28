@@ -18,7 +18,17 @@
         android:id="@+id/menu_gragment"
         android:name="com.example.graphql.feature.MenuFragment"
         tools:layout="@layout/menu_fragment"
-        android:label="Главное меню" />
+        android:label="Главное меню" >
+        <action
+            android:id="@+id/action_menu_gragment_to_cheklist"
+            app:destination="@id/cheklist" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cheklist"
+        android:name="com.example.graphql.feature.ChecklistFragment"
+        tools:layout="@layout/checklist_layout"
+        android:label="Чеклисты"/>
 
 
 </navigation>

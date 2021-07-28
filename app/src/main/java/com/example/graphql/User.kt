@@ -7,6 +7,7 @@ import androidx.security.crypto.MasterKey
 
 object User {
     private const val KEY_TOKEN = "TOKEN"
+    var tokenUser = ""
     private fun preferences(context: Context): SharedPreferences {
 
         val masterKeyAlias = MasterKey.Builder(context)
@@ -22,15 +23,16 @@ object User {
         )
     }
 
-    fun getToken(context: Context): String? {
-        return preferences(context).getString(KEY_TOKEN, null)
-    }
+//    fun getToken(context: Context): String? {
+//        return preferences(context).getString(KEY_TOKEN, null)
+//    }
 
     fun setToken(context: Context, token: String) {
-        preferences(context).edit().apply {
-            putString(KEY_TOKEN, token)
-            apply()
-        }
+        tokenUser = token
+//        preferences(context).edit().apply {
+//            putString(KEY_TOKEN, token)
+//            apply()
+//        }
     }
 
     fun removeToken(context: Context) {

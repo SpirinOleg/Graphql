@@ -1,0 +1,5 @@
+query Checklists{
+    checklists{
+        data{id,name}
+    }
+}
